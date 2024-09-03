@@ -20,7 +20,7 @@ hands = mp_hands.Hands(static_image_mode=False, min_detection_confidence=0.7)  #
 cap = cv2.VideoCapture(0)
 
 # Choose the dictionary to use
-selected_dict = hindi_dict  # Change this to your preferred dictionary
+selected_dict = bengali_dict  # Change this to your preferred dictionary
 
 while True:
     ret, frame = cap.read()

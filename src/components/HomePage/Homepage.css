@@ -1,0 +1,245 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Homepage background */
+body {
+  background: url('../../../public/visax-hBa68pkZD88-unsplash.jpg') no-repeat center center; /* Background image */
+  background-size: cover; /* Cover the entire container */
+  opacity: 1; /* Fully opaque */
+}
+
+/* Main container */
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Increased min-height */
+  margin-top: 40px; /* Increased margin-top */
+  width: 90%;
+  margin: auto;
+  padding-left: 30px; /* Add padding to shift content to the left */
+}
+
+/* Other CSS rules remain the same */
+.nav {
+  width: 80%; /* Increased width */
+  margin: auto;
+  padding: 10px 3%; /* Increased padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.devanagari {
+  font-family: "Noto Serif Devanagari", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20vw; /* Increased font size */
+  padding: 15px 3vw; /* Increased padding */
+  color:#f5a623;
+  transition : color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-shadow : 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-20px);
+  position: relative;
+  top: -50px;
+}
+
+.devanagari:hover {
+  transform: translateY(-30px);
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+.cleanButton {
+  padding: 20px 25px; /* Increased padding */
+  background-color: #09240a;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Increased border-radius */
+  cursor: pointer;
+  font-size: 16px; /* Increased font size */
+  outline: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.cleanButton:hover {
+  background-color: #F0F0F0;
+  color: #09240a;
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.content {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+  min-width: 400px; /* Increased min-width */
+  animation: slideIn 1s ease-in-out;
+  margin-left: -20px; /* Shift content slightly to the left */
+}
+
+.content h1 {
+  font-size: 10vw; /* Increased font size */
+  font-weight: bold;
+}
+
+.content h2 {
+  font-size: 8vw; /* Increased font size */
+  margin: 30px 0; /* Increased margin */
+}
+
+.subHeading {
+  font-size: 5vw; /* Increased font size */
+  font-weight: bold;
+  margin-bottom: 30px; /* Increased margin-bottom */
+}
+
+.description {
+  font-size: 5vw; /* Increased font size */
+  font-weight: 300;
+  max-width: 400px; /* Increased max-width */
+  margin-top: 30px; /* Increased margin-top */
+  transition: font-size 0.3s ease-in-out, transform 0.3s ease-in-out;
+  margin-left: -10px; /* Shift description slightly to the left */
+}
+
+.description:hover {
+  font-size: 2vw; /* Increased hover font size */
+  transform: scale(1.1);
+  color:white;
+}
+
+.imageContainer img {
+  width: 100%;
+  max-width: 700px; /* Increased max-width */
+  height: auto;
+  animation: popUp 1s ease-in-out;
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .nav {
+    gap: 25vw;
+  }
+
+  .content h1 {
+    font-size: 12rem;
+  }
+
+  .content h2 {
+    font-size: 3rem;
+  }
+
+  .subHeading {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 767px) {
+  .content {
+    min-width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .content h1 {
+    font-size: 8vw;
+  }
+
+  .content h2 {
+    font-size: 6vw;
+  }
+
+  .subHeading {
+    font-size: 4vw;
+  }
+
+  .description {
+    font-size: 4vw;
+    margin-left: 0;
+  }
+
+  .main {
+    padding-left: 0;
+  }
+
+  .imageContainer img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 6vw;
+  }
+
+  .content h2 {
+    font-size: 5vw;
+  }
+
+  .subHeading {
+    font-size: 3.5vw;
+  }
+
+  .description {
+    font-size: 3.5vw;
+  }
+
+  .cleanButton {
+    font-size: 14px;
+    padding: 15px 20px;
+    border-radius: 15px;
+  }
+
+  .nav {
+    width: 90%;
+    padding: 5px 2%;
+  }
+
+  .devanagari {
+    font-size: 20vw;
+    padding: 10px 2vw;
+  }
+}

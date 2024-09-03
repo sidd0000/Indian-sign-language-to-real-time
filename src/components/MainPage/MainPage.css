@@ -1,0 +1,254 @@
+/* Main page container */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  color: #ffffff;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  z-index: 1;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.header h1 {
+  font-size: 3rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Content styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Start camera button styles */
+.start-camera-button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase; /* Add text-transform for a more engaging look */
+}
+
+.start-camera-button span {
+  font-size: 1.8rem;
+}
+
+.start-camera-button:hover {
+  background-color: #ff4757;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* How It Works section */
+.how-it-works {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform for hover effect */
+}
+
+.how-it-works:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02); /* Add slight scale effect on hover */
+}
+
+.how-it-works h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.how-it-works p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px; /* Add gap between steps */
+}
+
+.step {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 10px; /* Reduced margin for better spacing */
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.step span {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+}
+
+/* API Integration section */
+.api-integration {
+  margin-top: 40px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.api-integration:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.02); /* Add slight scale effect on hover */
+}
+
+.api-integration h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.api-integration p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.api-button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.api-button:hover {
+  background-color: #1c7ed6;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  z-index: 1;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+.footer p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Animated footer GIF */
+.footer-gif {
+  width: 100px;
+  height: auto;
+  animation: spin 4s linear infinite;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .steps-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .step {
+      width: 80%;
+      margin: 10px; /* Reduced margin for better spacing */
+  }
+
+  .header h1 {
+      font-size: 2.5rem;
+  }
+
+  .start-camera-button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+  }
+
+  .how-it-works h2, .api-integration h2 {
+      font-size: 2rem;
+  }
+}

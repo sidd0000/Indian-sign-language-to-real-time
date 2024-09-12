@@ -48,7 +48,7 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import HomePage from './components/HomePage/HomePage'; // Ensure path and case sensitivity
+import HomePage from './components/HomePage/Homepage'; // Ensure path and case sensitivity
 import LoginPage from './components/Login/LoginPage';
 import SignUpPage from './components/SignUp/SignUpPage';
 import MainPage from './components/MainPage/MainPage';
